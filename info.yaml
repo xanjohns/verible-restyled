@@ -1,0 +1,21 @@
+---
+enabled: true
+name: verible
+version_cmd:
+command:
+  - verible-verilog-format
+  - "--inplace" #check if need quotes
+include:
+  - "**/*.v"
+  - "**/*.sv"
+supports_arg_set: #check
+supports_multiple_path: #check
+documentation:
+  - https://google.github.io/verible/verilog_format.html
+metadata:
+  languages: 
+    - Verilog
+    - System Verilog #check if need quotes
+  tests:
+    - contents: |
+      restyled: |
